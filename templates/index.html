@@ -647,10 +647,6 @@
             <div class="btn-wrap ">
                 <input type="radio" name="years" id="checkbox-all-years" value="all" onclick="app.changeDate()" />
                 <label for="checkbox-all-years" class="btn one">הכל</label>
-                {% for year in years %}
-                    <input type="radio" name="years" id="checkbox-{{year}}" value="{{year}}" onclick="app.changeDate()" checked />
-                    <label for="checkbox-{{year}}" class="btn one">{{year}}</label>
-                {% endfor %}
             </div>
             <div class="btn-wrap separator">
                 <input id="sdate" class="btn date" type="date" style="width: 38% !important; margin-top: 10px" value="{{default_start_date_format|default('2014-01-01')}}" oninput="app.loadFilter()">
